@@ -26,6 +26,10 @@ namespace baseballapp3
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+
+            bundles.Add(new ScriptBundle("~/bundles/react").Include(
+    // Add your JSX files here
+    "~/Scripts/tutorial.jsx"));
         }
     }
 }

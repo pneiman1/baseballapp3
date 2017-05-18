@@ -1,0 +1,91 @@
+﻿@model baseballapp3.Models.Stadium
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Stadium</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.City)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.City)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Surface)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Surface)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Capacity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Capacity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Team)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Team)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Typology)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Typology)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CenterField)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CenterField)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LogoPic)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LogoPic)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StadiumPic)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StadiumPic)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.StadiumID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

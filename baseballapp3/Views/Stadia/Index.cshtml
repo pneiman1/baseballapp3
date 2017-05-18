@@ -1,0 +1,83 @@
+﻿@model IEnumerable<baseballapp3.Models.Stadium>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<br />
+<br />
+<br />
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table table-striped">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.City)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Surface)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Capacity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Team)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Typology)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CenterField)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LogoPic)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StadiumPic)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.City)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Surface)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Capacity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Team)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Typology)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CenterField)
+        </td>
+        <td>
+            <img src="~/images/LogoPics/@Html.DisplayFor(modelItem => item.LogoPic)" style="height: 100px; width: 100px;"/>
+        </td>
+        <td>
+            <img src="~/images/StadiaPics/@Html.DisplayFor(modelItem => item.StadiumPic)" style="height: 100px; width: 100px;" />
+            
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.StadiumID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.StadiumID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.StadiumID })
+        </td>
+    </tr>
+}
+
+</table>

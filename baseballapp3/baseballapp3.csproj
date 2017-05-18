@@ -45,13 +45,49 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ClearScript, Version=5.4.8.0, Culture=neutral, PublicKeyToken=935d0c957da47c73, processorArchitecture=MSIL">
+      <HintPath>..\packages\JavaScriptEngineSwitcher.V8.2.2.0\lib\net45\ClearScript.dll</HintPath>
+    </Reference>
+    <Reference Include="JavaScriptEngineSwitcher.ChakraCore, Version=2.3.2.0, Culture=neutral, PublicKeyToken=c608b2a8cc9e4472, processorArchitecture=MSIL">
+      <HintPath>..\packages\JavaScriptEngineSwitcher.ChakraCore.2.3.2\lib\net45\JavaScriptEngineSwitcher.ChakraCore.dll</HintPath>
+    </Reference>
+    <Reference Include="JavaScriptEngineSwitcher.Core, Version=2.2.0.0, Culture=neutral, PublicKeyToken=c608b2a8cc9e4472, processorArchitecture=MSIL">
+      <HintPath>..\packages\JavaScriptEngineSwitcher.Core.2.2.0\lib\net45\JavaScriptEngineSwitcher.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="JavaScriptEngineSwitcher.Msie, Version=2.3.2.0, Culture=neutral, PublicKeyToken=c608b2a8cc9e4472, processorArchitecture=MSIL">
+      <HintPath>..\packages\JavaScriptEngineSwitcher.Msie.2.3.2\lib\net45\JavaScriptEngineSwitcher.Msie.dll</HintPath>
+    </Reference>
+    <Reference Include="JavaScriptEngineSwitcher.V8, Version=2.2.0.0, Culture=neutral, PublicKeyToken=c608b2a8cc9e4472, processorArchitecture=MSIL">
+      <HintPath>..\packages\JavaScriptEngineSwitcher.V8.2.2.0\lib\net45\JavaScriptEngineSwitcher.V8.dll</HintPath>
+    </Reference>
+    <Reference Include="JSPool, Version=2.0.1.0, Culture=neutral, PublicKeyToken=2fc7775f73072640, processorArchitecture=MSIL">
+      <HintPath>..\packages\JSPool.2.0.1\lib\net451\JSPool.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MsieJavaScriptEngine, Version=2.1.2.0, Culture=neutral, PublicKeyToken=a3a2846a37ac0d3e, processorArchitecture=MSIL">
+      <HintPath>..\packages\MsieJavaScriptEngine.2.1.2\lib\net45\MsieJavaScriptEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="React.Core, Version=3.0.1.0, Culture=neutral, PublicKeyToken=9aed67b161f7db78, processorArchitecture=MSIL">
+      <HintPath>..\packages\React.Core.3.0.1\lib\net40\React.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="React.Web, Version=3.0.1.0, Culture=neutral, PublicKeyToken=9aed67b161f7db78, processorArchitecture=MSIL">
+      <HintPath>..\packages\React.Web.3.0.1\lib\net40\React.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="React.Web.Mvc4, Version=3.0.1.0, Culture=neutral, PublicKeyToken=9aed67b161f7db78, processorArchitecture=MSIL">
+      <HintPath>..\packages\React.Web.Mvc4.3.0.1\lib\net40\React.Web.Mvc4.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -102,6 +138,12 @@
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
     </Reference>
+    <Reference Include="VroomJs, Version=1.2.3.0, Culture=neutral, PublicKeyToken=e7c52e67fcb0044f, processorArchitecture=MSIL">
+      <HintPath>..\packages\VroomJs.1.2.3\lib\net45\VroomJs.dll</HintPath>
+    </Reference>
+    <Reference Include="WebActivatorEx, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebActivatorEx.2.2.0\lib\net40\WebActivatorEx.dll</HintPath>
+    </Reference>
     <Reference Include="WebGrease">
       <Private>True</Private>
       <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
@@ -112,9 +154,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="EntityFramework">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -186,17 +225,37 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="App_Start\ReactConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\StadiaController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Stadium.cs">
+      <DependentUpon>StadiumModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\StadiumModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StadiumModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\StadiumModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StadiumModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\StadiumModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StadiumModel.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -207,12 +266,101 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="images\LogoPics\AngelsLogo.png" />
+    <Content Include="images\LogoPics\AstrosLogo.png" />
+    <Content Include="images\LogoPics\braveslogo1.gif" />
+    <Content Include="images\LogoPics\brewerslogo2.png" />
+    <Content Include="images\LogoPics\CardinalsLogo.gif" />
+    <Content Include="images\LogoPics\ClevelandLogo.png" />
+    <Content Include="images\LogoPics\CubsLogo.png" />
+    <Content Include="images\LogoPics\DetroitLogo.png" />
+    <Content Include="images\LogoPics\DiamondbacksLogo.png" />
+    <Content Include="images\LogoPics\DodgersLogo.png" />
+    <Content Include="images\LogoPics\GiantsLogo.png" />
+    <Content Include="images\LogoPics\JaysLogo.png" />
+    <Content Include="images\LogoPics\MarinersLogo.png" />
+    <Content Include="images\LogoPics\MarlinsLogo.png" />
+    <Content Include="images\LogoPics\MetsLogo.png" />
+    <Content Include="images\LogoPics\mlblogo1.jpg" />
+    <Content Include="images\LogoPics\mlblogo3.png" />
+    <Content Include="images\LogoPics\NationalsLogo.png" />
+    <Content Include="images\LogoPics\OaklandLogo.png" />
+    <Content Include="images\LogoPics\OriolesLogo.png" />
+    <Content Include="images\LogoPics\PadresLogo.png" />
+    <Content Include="images\LogoPics\PhilliesLogo.gif" />
+    <Content Include="images\LogoPics\PiratesLogo.png" />
+    <Content Include="images\LogoPics\RangersLogo.gif" />
+    <Content Include="images\LogoPics\RaysLogo.gif" />
+    <Content Include="images\LogoPics\RedsLogo.png" />
+    <Content Include="images\LogoPics\RedSoxLogo.png" />
+    <Content Include="images\LogoPics\RockiesLogo.png" />
+    <Content Include="images\LogoPics\RoyalsLogo.png" />
+    <Content Include="images\LogoPics\TwinsLogo.png" />
+    <Content Include="images\LogoPics\WhiteSox.png" />
+    <Content Include="images\LogoPics\YankeesLogo.png" />
+    <Content Include="images\StadiaPics\Angel_Stadium.jpg" />
+    <Content Include="images\StadiaPics\AT&amp;T_Park.jpg" />
+    <Content Include="images\StadiaPics\Ballpark_In_Arlington.jpg" />
+    <Content Include="images\StadiaPics\Busch_Stadium.jpg" />
+    <Content Include="images\StadiaPics\Camden_Yard.jpg" />
+    <Content Include="images\StadiaPics\Chase_Field.jpg" />
+    <Content Include="images\StadiaPics\Citi_Field.jpg" />
+    <Content Include="images\StadiaPics\Comeria_Park.jpg" />
+    <Content Include="images\StadiaPics\Coors_field.jpg" />
+    <Content Include="images\StadiaPics\Dodger_Stadium.jpg" />
+    <Content Include="images\StadiaPics\Fenway.jpg" />
+    <Content Include="images\StadiaPics\Field_At_The_Park.jpg" />
+    <Content Include="images\StadiaPics\Great_American_Ball_Park.jpg" />
+    <Content Include="images\StadiaPics\MLBLocations.png" />
+    <Content Include="images\StadiaPics\Marlins_Park.jpg" />
+    <Content Include="images\StadiaPics\McAfee_Coliseum.jpg" />
+    <Content Include="images\StadiaPics\Miller_Park.jpg" />
+    <Content Include="images\StadiaPics\Minute_Maid_Park.jpg" />
+    <Content Include="images\StadiaPics\Nationals_Park.jpg" />
+    <Content Include="images\StadiaPics\NewKauffman.jpg" />
+    <Content Include="images\StadiaPics\Petco_Park.jpg" />
+    <Content Include="images\StadiaPics\PNC_Park.jpg" />
+    <Content Include="images\StadiaPics\Progressive_Field.jpg" />
+    <Content Include="images\StadiaPics\Rogers_Centre.jpg" />
+    <Content Include="images\StadiaPics\SafecoField.jpg" />
+    <Content Include="images\StadiaPics\SunTrust_Park.jpg" />
+    <Content Include="images\StadiaPics\Target_Field.jpg" />
+    <Content Include="images\StadiaPics\Tropicana_Field.jpg" />
+    <Content Include="images\StadiaPics\U.S._Cellular_Field.jpg" />
+    <Content Include="images\StadiaPics\Wrigley_Field.jpg" />
+    <Content Include="images\StadiaPics\Yankee_Stadium.jpg" />
+    <Content Include="Models\StadiumModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>StadiumModel.edmx</DependentUpon>
+      <LastGenOutput>StadiumModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\StadiumModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>StadiumModel.edmx</DependentUpon>
+      <LastGenOutput>StadiumModel.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <EntityDeploy Include="Models\StadiumModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>StadiumModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\StadiumModel.edmx.diagram">
+      <DependentUpon>StadiumModel.edmx</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\react\react-dom-server.js" />
+    <Content Include="Scripts\react\react-dom-server.min.js" />
+    <Content Include="Scripts\react\react-dom.js" />
+    <Content Include="Scripts\react\react-dom.min.js" />
+    <Content Include="Scripts\react\react-with-addons.js" />
+    <Content Include="Scripts\react\react-with-addons.min.js" />
+    <Content Include="Scripts\react\react.js" />
+    <Content Include="Scripts\react\react.min.js" />
+    <Content Include="Scripts\tutorial.jsx" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
@@ -257,6 +405,11 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Stadia\Create.cshtml" />
+    <Content Include="Views\Stadia\Delete.cshtml" />
+    <Content Include="Views\Stadia\Details.cshtml" />
+    <Content Include="Views\Stadia\Edit.cshtml" />
+    <Content Include="Views\Stadia\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -275,6 +428,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

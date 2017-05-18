@@ -6,6 +6,7 @@ using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
 using Owin;
 using baseballapp3.Models;
+using React.Web;
 
 namespace baseballapp3
 {
